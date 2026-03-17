@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Jarvis Tecnology</title>
+</head>
+<body>
+<header>
+    <h1>Tienda con Jarvis</h1>
+</header>
+
+<section>
+    <h2>Productos disponibles</h2>
+    <div id="productos"></div>
+</section>
+
+<footer>
+    <p>Asistente inteligente activo 🤖</p>
+</footer>
+
+<script>
+fetch("http://127.0.0.1:5000/productos")
+.then(res => res.json())
+.then(data => {
+    let contenedor = document.getElementById("productos")
+
+    data.forEach(p => {
+        contenedor.innerHTML += `
+            <div class="producto">
+                <h3>${p.nombre}</h3>
+                <p>💲 ${p.precio}</p>
+                <p>${p.categoria}</p>
+            </div>
+        `
+    })
+})
+</script>
+
+<!-- 🤖 BOTPRESS -->
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/03/17/12/20260317125332-JOWGJRH5.js" defer></script>
+
+</body>
+</html>
+</body>
+</html>
