@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #0f172a;
+    color: white;
+}
+
+/* Secciones */
+header, section, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background: #1e293b;
+}
+
+section {
+    margin: 20px;
+}
+
+/* Productos */
+.producto {
+    background: #1e293b;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+}
