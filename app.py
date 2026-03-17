@@ -17,7 +17,7 @@ productos = [
 #Ruta principal
 @app.route("/")
 def inicio():
-    return "Servidor de tecnología activo 🚀"
+    return "Servidor de tecnología activo "
 
 #Todos los productos
 @app.route("/productos", methods=["GET"])
