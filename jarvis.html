@@ -17,7 +17,7 @@
 </section>
 
 <footer>
-    <p>Asistente inteligente activo 🤖</p>
+    <p>Asistente inteligente activo</p>
 </footer>
 
 <script>
@@ -30,7 +30,7 @@ fetch("http://127.0.0.1:5000/productos")
         contenedor.innerHTML += `
             <div class="producto">
                 <h3>${p.nombre}</h3>
-                <p>💲 ${p.precio}</p>
+                <p>$ ${p.precio}</p>
                 <p>${p.categoria}</p>
             </div>
         `
