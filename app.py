@@ -14,17 +14,12 @@ productos = [
     {"id": 10, "nombre": "Parlante Bluetooth JBL", "precio": 300, "categoria": "audio"}
 ]
 
-#Ruta principal
 @app.route("/")
 def inicio():
     return "Servidor de tecnología activo "
-
-#Todos los productos
 @app.route("/productos", methods=["GET"])
 def obtener_productos():
     return jsonify(productos)
-
-#Filtrar por categoría
 @app.route("/productos/<categoria>", methods=["GET"])
 def productos_por_categoria(categoria):
     filtrados = [p for p in productos if p["categoria"].lower() == categoria.lower()]
