@@ -1,29 +1,88 @@
-body {
-    font-family: Arial;
+/* Fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
     margin: 0;
-    background: #0f172a;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Secciones */
-header, section, footer {
-    padding: 20px;
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0a0f1c, #02040a);
+    color: #e6f1ff;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    box-shadow: 0 0 20px #00aaff;
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #00d9ff;
+}
+
+/* SECTION */
+section {
+    padding: 40px;
     text-align: center;
 }
 
-header {
-    background: #1e293b;
+section h2 {
+    margin-bottom: 25px;
+    color: #00aaff;
 }
 
-section {
-    margin: 20px;
+/* GRID PRODUCTOS */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-
+/* TARJETA PRODUCTO */
 .producto {
-    background: #1e293b;
-    margin: 10px auto;
-    padding: 10px;
-    width: 250px;
-    border-radius: 10px;
+    background: rgba(0, 20, 40, 0.8);
+    border: 1px solid #00aaff;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+}
+
+.producto:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px #00d9ff;
+}
+
+/* TEXTO PRODUCTO */
+.producto h3 {
+    margin-bottom: 10px;
+    color: #00d9ff;
+}
+
+.precio {
+    font-size: 1.2em;
+    color: #00ffcc;
+    margin-bottom: 5px;
+}
+
+.categoria {
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #001f3f;
+    margin-top: 30px;
+    color: #00aaff;
+    box-shadow: 0 0 10px #00aaff;
 }
